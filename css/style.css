@@ -10,15 +10,15 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
 }
 
-.servicio,
+/* .servicio,
 .navegacion-principal,
 .formulario {
   scroll-snap-align: center;
   scroll-snap-stop: normal;
-}
+} */
 
 *,
 *:before,
