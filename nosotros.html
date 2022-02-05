@@ -1,12 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Nosotros</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="preload" href="css/normalize.css" as="style" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Nosotros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" href="css/style.css" as="style" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="titulo">Rafael Pérez-San Lázaro <span>Freelancer</span></h1>
+    </header>
+    <div class="nav-bg">
+      <nav class="navegacion-principal contenedor">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="#">Clientes</a>
+      </nav>
+    </div>
+
+    <!--<img src="img/hero.jpg" alt="Image" />-->
+
+    <section class="hero">
+      <div class="contenido-hero">
+        <h2>Diseño y desarrollo web <span>freelancer</span></h2>
+        <p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-map-pin"
+            width="44"
+            height="44"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#ffc107"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <circle cx="12" cy="11" r="3" />
+            <path
+              d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+            />
+          </svg>
+        </p>
+        <p>Guadalajara, Jalisco</p>
+        <a href="#contacto" class="boton">Contactar</a>
+      </div>
+    </section>
+
+    <main class="contenedor sombra">
+
+      <section id="contacto">
+        <h2>Nosotros</h2>
+        
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Todos los derechos reservados</p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      jQuery(($) => {
+        // The speed of the scroll in milliseconds
+        const speed = 1000;
+
+        $('a[href*="#"]')
+          .filter(
+            (i, a) =>
+              a.getAttribute("href").startsWith("#") ||
+              a.href.startsWith(`${location.href}#`)
+          )
+          .unbind("click.smoothScroll")
+          .bind("click.smoothScroll", (event) => {
+            const targetId = event.currentTarget
+              .getAttribute("href")
+              .split("#")[1];
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              event.preventDefault();
+              $("html, body").animate(
+                { scrollTop: $(targetElement).offset().top },
+                speed
+              );
+            }
+          });
+      });
+    </script>
+  </body>
 </html>
