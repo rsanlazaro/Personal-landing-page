@@ -226,30 +226,31 @@
 
       <section id="contacto">
         <h2>Contacto</h2>
-        <form action="" class="formulario">
+        <form action="https://formsubmit.co/desarrollo_web_rsl@hotmail.com" method="POST" class="formulario">
           <fieldset>
             <legend>Contáctame</legend>
 
             <div class="contenedor-campos">
               <div class="campo">
                 <label for="">Nombre</label>
-                <input type="text" placeholder="Nombre" />
+                <input type="text" placeholder="Nombre" name="Nombre"/>
               </div>
 
               <div class="campo">
                 <label for="">Teléfono</label>
-                <input type="tel" placeholder="Teléfono" />
+                <input type="tel" placeholder="Teléfono" name="Teléfono"/>
               </div>
 
               <div class="campo">
                 <label for="">Correo</label>
-                <input type="email" placeholder="Mail" />
+                <input type="email" placeholder="Mail" name="Correo"/>
               </div>
 
               <div class="campo">
                 <label for="">Mensaje</label>
-                <textarea name="" id=""></textarea>
+                <textarea name="Mensaje"></textarea>
               </div>
+              <input type="hidden" name="_subject" value="Web design request">
             </div>
             <div class="submit">
               <input type="submit" class="boton" value="Enviar" />
