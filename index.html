@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="icon" href="build/img/icon.png">
+    <link rel="icon" href="build/img/icon.png" />
     <meta charset="UTF-8" />
     <meta
       name="description"
@@ -28,7 +28,9 @@
         <span class="titulo-texto">Diseño web</span>
       </h1> -->
       <div class="header">
-        <img src="build/img/logo_RSL_mini.png" alt="logo">
+        <a href="index.html">
+          <img src="build/img/logo_RSL_mini.png" alt="logo" />
+        </a>
         <h1>Diseño y desarrollo <span> web personalizado </span></h1>
       </div>
     </header>
@@ -270,6 +272,9 @@
                   id="phone"
                   placeholder="Teléfono"
                   name="Teléfono"
+                  pattern="[0-9]{10}"
+                  oninvalid="this.setCustomValidity('Ingresa un número de 10 dígitos')"
+                  oninput="this.setCustomValidity('')"
                 />
               </div>
 
@@ -293,7 +298,7 @@
               <input
                 type="hidden"
                 name="_next"
-                value="https://rafael-perez.netlify.app/thanks.html"
+                value="https://desarrollo-web-rsl.netlify.app/thanks.html"
               />
             </div>
             <div class="submit">
@@ -301,6 +306,9 @@
             </div>
           </fieldset>
         </form>
+        <div class="errores">
+
+        </div>
       </section>
     </main>
 
